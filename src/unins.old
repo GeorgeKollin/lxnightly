@@ -1,0 +1,54 @@
+#!/bin/bash
+
+command -v xterm;
+isxterm="$?";
+command -v terminator;
+isterminator="$?";
+command -v rxvt;
+isrxvt="$?";
+command -v gnome-terminal;
+isgnometerm="$?";
+command -v konsole;
+iskonsole="$?";
+command -v lxterminal;
+islxterminal="$?";
+command -v xfce4-terminal;
+isxfceterm="$?";
+
+if [ "$isxterm" -eq "0" ];
+    then xterm -e "echo '';";
+elif [ "$isterminator" -eq "0" ];
+    then terminator -e "echo '';";
+elif [ "$isrxvt" -eq "0" ];
+    then rxvt -e "echo '';";
+elif [ "$isgnometerm" -eq "0" ];
+    then gnome-terminal -e "echo '';";
+elif [ "$iskonsole" -eq "0" ];
+    then konsole -e "echo '';";
+elif [ "$islxterminal" -eq "0" ];
+    then lxterminal -e "echo '';";
+elif [ "$isxfceterm" -eq "0" ];
+    then xfce4-terminal -e "echo '';";
+else echo "Note: This terminal is not fully compatible with Linux Nightly. Errors may occur.";
+fi;
+
+if ! [ -f "./src/a9eed7dbbb875d537a60baf6442c86cb" ];
+    then echo "Error: err_auth";
+    exit 1;
+fi;
+
+dirtime=$(date +'%s');
+mkdir "./backup/lxnightv3.backup$dirtime/";
+mv "./bin/" "./backup/lxnightv3.backup$dirtime/bin/";
+mv "./conf/" "./backup/lxnightv3.backup$dirtime/conf/";
+mv "./daymode.desktop" "./backup/lxnightv3.backup$dirtime";
+mv "./nightmode.desktop" "./backup/lxnightv3.backup$dirtime";
+mv "./src/SETUP_err" "./backup/lxnightv3.backup$dirtime";
+mv "./src/sub_exc" "./backup/lxnightv3.backup$dirtime";
+mv "./src/sys_exc" "./backup/lxnightv3.backup$dirtime";
+mv "./src/tk_exc" "./backup/lxnightv3.backup$dirtime";
+mv "./src/os_exc" "./backup/lxnightv3.backup$dirtime";
+mv "./src/setup.old" "./SETUP";
+mv "./UNINSTALL" "./src/unins.old";
+
+exit 0;
