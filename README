@@ -24,11 +24,17 @@ In order to install "Linux Nightly" on your system, please follow these steps be
     
 5.  Close terminal after commands' completion.
 
-6.  Browse to the directory, which is named after "lxnightly".
+6.  Browse to the "lxnightly" directory.
 
         ATTENTION! You mustn't change the location of this directory after installation.
+        
+7.  Open a terminal in that directory and run the command below:
+
+        chmod +x "./SETUP"
+        
+    to make "SETUP" executable.
     
-7.  If your terminal type is one of the following:
+8.  If your terminal type is one of the following:
 
         i.      xterm
         ii.     terminator
@@ -43,17 +49,17 @@ In order to install "Linux Nightly" on your system, please follow these steps be
     
         "./SETUP"
         
-    Then go to step 8.
+    Then go to step 9.
     
-8.  Click "Install".
+9.  Click "Install".
 
-9.  Choose between dark and light theme for the desktop icons.
+10. Choose between dark and light theme for the desktop icons.
 
-10. Click "Confirm & install".
+11. Click "Confirm & install".
 
-11. Wait until the installation finishes.
+12. Wait until the installation finishes.
 
-12. Click "Finish" to close the setup guide.
+13. Click "Finish" to close the setup guide.
 
 
 
