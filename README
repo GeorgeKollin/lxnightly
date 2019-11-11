@@ -12,7 +12,7 @@ In order to install "Linux Nightly" on your system, please follow these steps be
 1.  Download the basic program files from the official git repository: 
     https://github.com/georgekollin/lxnightly/
 
-2.  Place the downloaded "lxnightly.tar.gz" archieve in a directory of your choice.
+2.  Place the downloaded "lxnightly-master.zip" archieve in a directory of your choice.
 
 3.  Open a terminal to the current directory.
 
