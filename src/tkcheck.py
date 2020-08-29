@@ -1,6 +1,5 @@
-from tkinter import *
 try:
-    pass
+    from tkinter import *
 except:
     outfile = open("./src/tk_exc", "w")
     outfile.write("1")
