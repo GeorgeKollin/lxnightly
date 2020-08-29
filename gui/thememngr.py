@@ -12,7 +12,7 @@ class InstallationWindow:
         self.window = Tk()
         # The given message should be at least 50 characters long!
         # Window title
-        self.window.title("Install Linux Nightly v3.0")
+        self.window.title("Install Linux Nightly v3.5")
         # "CHOOSE ICON THEME" label
         headlbl = Label(self.window, text="CHOOSE ICON THEME (For desktop shortcuts): ")
         headlbl.grid(row=0, column=0, padx=25, pady=5, columnspan=2)
@@ -20,7 +20,7 @@ class InstallationWindow:
         thmtuple = (" Dark icon theme (recommended for light background)", " Light icon theme (recommended for dark background)")
         thmcont = StringVar()
         thmcont.set(thmtuple)
-        self.thmbox = Listbox(self.window, width=51, height=2, listvariable=thmcont, bg="white")
+        self.thmbox = Listbox(self.window, width=51, height=2, listvariable=thmcont, bg="white", fg="black")
         self.thmbox.grid(row=1, column=0, padx=25, pady=5, columnspan=2)
         self.thmbox.bind("<<ListboxSelect>>", self.showContinue)
         self.window.update()
@@ -57,6 +57,20 @@ class InstallationWindow:
             samplelbl.grid(row=2, column=1, pady=5)
         else:
             try:
+                thmout = open("./conf/thm_cfg", "w")
+                thmout.write("l")
+                thmout.close()
+            except:
+                print("Failed to open \"./conf/thm_cfg\"")
+            sampleimg = PhotoImage(file="./icons/lighttheme.gif")
+            samplelbl = Label(self.window, image=sampleimg)
+            samplelbl.photo = sampleimg
+            samplelbl.grid(row=2, column=1, pady=5)
+        contbtn = Button(self.window, text="Confirm and install", command=self.window.destroy)
+        contbtn.grid(row=3, column=0, columnspan=2, pady=5)
+
+InstallationWindow()
+
                 thmout = open("./conf/thm_cfg", "w")
                 thmout.write("l")
                 thmout.close()
