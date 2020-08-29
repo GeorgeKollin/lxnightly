@@ -70,17 +70,3 @@ class InstallationWindow:
         contbtn.grid(row=3, column=0, columnspan=2, pady=5)
 
 InstallationWindow()
-
-                thmout = open("./conf/thm_cfg", "w")
-                thmout.write("l")
-                thmout.close()
-            except:
-                print("Failed to open \"./conf/thm_cfg\"")
-            sampleimg = PhotoImage(file="./icons/lighttheme.gif")
-            samplelbl = Label(self.window, image=sampleimg)
-            samplelbl.photo = sampleimg
-            samplelbl.grid(row=2, column=1, pady=5)
-        contbtn = Button(self.window, text="Confirm and install", bg="white", command=self.window.destroy)
-        contbtn.grid(row=3, column=0, columnspan=2, pady=5)
-
-InstallationWindow()
