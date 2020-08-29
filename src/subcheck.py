@@ -1,6 +1,5 @@
-from subprocess import *
 try:
-    pass
+    from subprocess import *
 except:
     outfile = open("./src/sub_exc", "w")
     outfile.write("1")
