@@ -1,5 +1,5 @@
-© 2019 Linux Nightly (v. 3.0.1341787)
-A graphic user interface program for f.lux®
+© 2020 Linux Nightly (v. 3.5.1343D7D)
+A graphical user interface program for f.lux®
 Git repository: https://github.com/georgekollin/lxnightly/
 f.lux® website: https://justgetflux.com/
 
@@ -44,6 +44,168 @@ In order to install "Linux Nightly" on your system, please follow these steps be
         vi.     lxterminal
         vii.    xfce4-terminal
         
+    then double-click on "SETUP".
+    If your terminal type is none of the above, open a terminal to "lxnightly" directory, and run the command below:
+    
+        "./SETUP"
+        
+    Then go to step 9.
+    
+9.  Click "Install".
+
+10. Choose between dark and light theme for the desktop icons.
+
+11. Click "Confirm & install".
+
+12. Wait until the installation finishes.
+
+13. Click "Finish" to close the setup guide.
+
+
+
+----------
+HOW TO USE
+----------
+
+By the time the installation finishes, two ".desktop" files are created. Just double-click on "nightmode.desktop" file, to launch the program. When you click on it, a window appears.
+
+    Features explained:
+    
+        Latitude of your current position (Degrees - optional): Move the slider, from left to right and vice versa to adjust your position latitude in degrees.
+    
+        Longitude of your current position (Degrees): Move the slider, from left to right and vice versa to adjust your position longitude in degrees.
+        
+        ZIP Code of your current location (optional): Enter the ZIP Code of your area. Replaces latitude and longitude. You must check the "Use ZIP Code instead of longitude & latitude" checkbox, to send the value to f.lux®.
+        
+        Screen colour temperature (Kelvin): Move the slider, from left to right and vice versa to adjust the screen colour temperature in Kelvin.
+        
+        Change desktop icon theme (optional): Choose an option from the list, to change the colour theme of the desktop icons.
+        
+        [-r 1] (use randr): Add [-r 1] parameter to f.lux® cmd command.
+        
+        [-nofork]: Force f.lux® to stay active in terminal. It must be always inactive.
+        
+        Use ZIP Code instead of longitude & latitude: Check this in order to send the ZIP Code value, which you've entered, as an f.lux® parameter.
+        
+        Show command line output: If you enable this option, the command line buffer, after command execution, will appear inside a textbox.
+        
+        Use daytime filter (BETA): Apply f.lux® night time filter, even when it's daytime. The filter will be applied for 7 - 8 hours. Then, you have to apply it again.
+        
+        Turn off f.lux®: This button terminates all f.lux® sessions.
+        
+        Exit: Close the dialog window.
+        
+        Apply changes & turn on f.lux®: This button saves your preferences and starts a new f.lux® session, which is based on them.
+        
+        F.lux® exit status: You can use this exit code for debugging (For advanced users).
+        
+
+---------------
+TROUBLESHOOTING
+---------------
+
+ERROR CODES EXPLAINED:
+
+    err_auth: Authentication error. Install or run Linux Nightly, only from its root directory, by double-clicking "SETUP" and "nightmode.desktop" respectively. If this does not fix the error, download and install Linux Nightly again.
+    
+    err_conf_tk_exc: Cannot create file "./src/tk_exc" error. Please, check if the file already exists, or if you have the required privileges to create files in that directory.
+    
+    err_conf_sys_exc: Cannot create file "./src/sys_exc" error. Please, check if the file already exists, or if you have the required privileges to create files in that directory.
+    
+    err_conf_sub_exc: Cannot create file "./src/sub_exc" error. Please, check if the file already exists, or if you have the required privileges to create files in that directory.
+    
+    err_conf_os_exc: Cannot create file "./src/os_exc" error. Please, check if the file already exists, or if you have the required privileges to create files in that directory.
+    
+    err_conf_osval: Cannot write to file "./src/os_exc" error. Please, check if the file exists, or if you have the required privileges to write data on it.
+    
+    err_conf_tkval: Cannot write to file "./src/tk_exc" error. Please, check if the file exists, or if you have the required privileges to write data on it.
+    
+    err_conf_sysval: Cannot write to file "./src/sys_exc" error. Please, check if the file exists, or if you have the required privileges to write data on it.
+    
+    err_conf_subval: Cannot write to file "./src/sub_exc" error. Please, check if the file exists, or if you have the required privileges to write data on it.
+    
+    err_conf: Cannot create directory "./conf". Please, check if you have the required privileges to do it.
+    
+    err_conf_randr_en: Cannot create file "./conf/randr_en" error. Please, check if the file already exists, or if you have the required privileges to create files in that directory.
+    
+    err_conf_no_fork: Cannot create file "./conf/no_fork" error. Please, check if the file already exists, or if you have the required privileges to create files in that directory.
+    
+    err_conf_zip_all: Cannot create file "./conf/zip_all" error. Please, check if the file already exists, or if you have the required privileges to create files in that directory.
+    
+    err_conf_lat_deg: Cannot create file "./conf/lat_deg" error. Please, check if the file already exists, or if you have the required privileges to create files in that directory.
+    
+    err_conf_zip_code: Cannot create file "./conf/zip_code" error. Please, check if the file already exists, or if you have the required privileges to create files in that directory.
+    
+    err_conf_exec_out: Cannot create file "./conf/exec_out" error. Please, check if the file already exists, or if you have the required privileges to create files in that directory.
+    
+    err_conf_lgtd_deg: Cannot create file "./conf/lgtd_deg" error. Please, check if the file already exists, or if you have the required privileges to create files in that directory.
+    
+    err_conf_tmprt_indx: Cannot create file "./conf/tmprt_indx" error. Please, check if the file already exists, or if you have the required privileges to create files in that directory.
+    
+    err_conf_root_path: Cannot create file "./conf/root_path" error. Please, check if the file already exists, or if you have the required privileges to create files in that directory.
+    
+    err_conf_thm_cfg: Cannot create file "./conf/thm_cfg" error. Please, check if the file already exists, or if you have the required privileges to create files in that directory.
+    
+    err_conf_flux_exit: Cannot create file "./conf/flux_exit.txt" error. Please, check if the file already exists, or if you have the required privileges to create files in that directory.
+    
+    err_conf_zipallval: Cannot write to file "./conf/zip_all" error. Please, check if the file exists, or if you have the required privileges to write data on it.
+    
+    err_conf_noforkval: Cannot write to file "./conf/no_fork" error. Please, check if the file exists, or if you have the required privileges to write data on it.
+    
+    err_conf_randrval: Cannot write to file "./conf/randr_en" error. Please, check if the file exists, or if you have the required privileges to write data on it.
+    
+    err_conf_latval: Cannot write to file "./conf/lat_deg" error. Please, check if the file exists, or if you have the required privileges to write data on it.
+    
+    err_conf_zipval: Cannot write to file "./conf/zip_code" error. Please, check if the file exists, or if you have the required privileges to write data on it.
+    
+    err_conf_thmval: Cannot write to file "./conf/thm_cfg" error. Please, check if the file exists, or if you have the required privileges to write data on it.
+    
+    err_conf_lgtdval: Cannot write to file "./conf/lgtd_deg" error. Please, check if the file exists, or if you have the required privileges to write data on it.
+    
+    err_conf_tmprtval: Cannot write to file "./conf/tmprt_indx" error. Please, check if the file exists, or if you have the required privileges to write data on it.
+    
+    err_conf_pathval: Cannot write to file "./conf/root_path" error. Please, check if the file exists, or if you have the required privileges to write data on it.
+    
+    err_conf_exitval: Cannot make executable file "./conf/start.sh".
+    
+    err_bin: Cannot create directory "./bin". Please, check if you have the required privileges to do it.
+    
+    err_internet_disconnected: Linux Nightly installs f.lux files from the internet. So, a good internet connection needs to be established.
+    
+    err_binmv_64: Failed to move "xflux64.tgz" archieve to "./bin" directory.
+    
+    err_binmv_32: Failed to move "xflux-pre.tgz" archieve to "./bin" directory.
+    
+    err_binmv_old: Failed to move "xflux.tgz" archieve to "./bin" directory.
+    
+    err_extr_32: Failed to extract files from "xflux-pre.tgz" archieve.
+    
+    err_binmv_32_extr/err_binmv_64_extr: Failed to move "xflux" binary file to "./bin" directory.
+    
+    err_extr_64: Failed to extract files from "xflux64.tgz" archieve.
+    
+    ------------------------------------------------------------------------------------------------------
+    If you notice any other error, please let me know (https://github.com/georgekollin/lxnightly/issues/).
+    This program was tested on Kubuntu 18.04 (https://kubuntu.org/) platform and worked properly. 
+    It's not tested on other Linux distributions.
+    ------------------------------------------------------------------------------------------------------
+
+    
+-------
+RESTORE
+-------
+
+To restore Linux Nightly to its default values, just double-click on "UNINSTALL", or open a terminal in the Linux Nightly root directory and run the command below:
+
+    "./UNINSTALL"
+    
+    
+---------
+UNINSTALL
+---------
+
+To remove Linux Nightly from your system, just remove "lxnightly" directory.
+
     then double-click on "SETUP".
     If your terminal type is none of the above, open a terminal to "lxnightly" directory, and run the command below:
     
