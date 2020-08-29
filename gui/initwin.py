@@ -12,16 +12,16 @@ class InstallationWindow:
         window = Tk()
         # The given message should be at least 50 characters long!
         # Window title
-        window.title("Install Linux Nightly v3.0")
+        window.title("Install Linux Nightly v3.5")
         # Window messages
         msgtoshow = Label(window, text=labtxt)
         msgtoshow.grid(row=0, column=0, padx=25, pady=5)
         # "Close" button
         if (isdisabled == 0):
-            closebtn = Button(window, text=btntxt, bg="white", command=window.destroy)
+            closebtn = Button(window, text=btntxt, command=window.destroy)
             closebtn.grid(row=1, column=0)
         else:
-            closebtn = Button(window, text=btntxt, bg="white", state="disabled")
+            closebtn = Button(window, text=btntxt, state="disabled")
             closebtn.grid(row=1, column=0)
         window.update()
         # Center window
